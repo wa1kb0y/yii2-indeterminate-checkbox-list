@@ -1,0 +1,15 @@
+{
+    "name": "walkboy/yii2-indeterminate-checkbox-list",
+    "description": "Yii2 multi-level checkbox list",
+    "version": "0.1",
+    "type": "yii2-extension",
+    "license": "MIT",
+    "require": {
+        "php": ">=5.6.0",
+    },
+    "autoload": {
+        "psr-4": {
+            "walkboy\\IndeterminateCheckboxList\\": ""
+        }
+    }
+}
