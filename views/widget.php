@@ -10,11 +10,13 @@ function printRecursive($model, $attribute, $source, $parent_attr, $children_att
     $classname = \yii\helpers\StringHelper::basename(get_class($model));
 
     echo '<ul>';
-    foreach ($source as $item) {
-        if (in_array($item->id, $model->{$attribute})){
-            $selected = 'checked';
-        } else {
-            $selected = '';
+    foreach ($source as $item) 
+    {
+        $selected = '';
+        if (is_array($model->{$attribute})){
+            if (in_array($item->id, $model->{$attribute})){
+                $selected = 'checked';
+            }
         }
 
         if ($item->{$parent_attr} === null) {
